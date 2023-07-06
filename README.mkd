@@ -1,0 +1,7 @@
+Conversor binário, decimal e hexadecimal
+
+Trabalho final da matéria de Fundamentos para Sistema de Internet.
+
+Esse trabalho tem como objetivo mostrar os conhecimentos adquiridos sobre os sistemas de numeração binária, decimal e hexadecimal.
+
+O usuário pode inserir um dado numérico e receber o seu correspondente em outras.
