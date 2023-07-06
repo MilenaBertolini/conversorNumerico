@@ -12,6 +12,10 @@
         <header>
             <nav>
                 <h1>Conversor Numérico</h1>
+                <ul>
+                    <li><a href="index.html"></a>Home</li>
+                    <li><a href="conversor.html"></a>Conversor</li>
+                </ul>
             </nav>
         </header>
 
@@ -73,21 +77,22 @@
                 <h1>Hexadecimal</h1>
                 <div class="linha"></div>
                 <div>
-                    <img src="imagens/decimais.jpg" alt="imagem de números decimais">
-                    <p>O sistema decimal é o sistema de numeração mais familiar para a maioria das pessoas. Ele utiliza a base 10, o que significa que possui 10 símbolos diferentes: 0, 1, 2, 3, 4, 5, 6, 7, 8 e 9. Esses símbolos são combinados para representar números maiores.</p>
+                    <img src="imagens/hexadecimal.webp" alt="imagem de números hexadecimais">
+                    <p>O sistema hexadecimal também é amplamente utilizado em computação, especialmente para representar valores de memória, endereços e cores. Ele utiliza a base 16, o que significa que possui 16 símbolos: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E e F. As letras de A a F são usadas para representar os valores de 10 a 15. Cada posição no número hexadecimal representa uma potência de 16.</p>
                 </div>
-                <h2>Como converter decimal para binário</h2>
+                <h2>Como converter hexadecimal para decimal</h2>
                 <div class="exemplo">
-                    <p>Você pega o número decimal divide ele por 2, e anota o resto que sobrar da divisão. E vai dividindo os resultados por 2, sempre pegando os restos. Continue fazendo esse procedimento até o resultado ser 0.<br><br>
-                    Para obter o resultado em binário, você pega os restos anotados e os invertem de ordem, como se pegasse os restos das divisões de baixo para cima (da última divisão para a primeira). Como vocês podem ver a seguir na imagem.</p>
-                    <img src="imagens/exDecBin.png" alt="imagem conversão decimal binário">
+                    <p>Você pega o número hexadecimal, separa cada dígito dele. Cada letra e cada número corresponde a um número decimal.<br><br>
+                    A conversão é feita multiplicando cada número pela potência de 16 correspondente à sua posição e somando os resultados. A posição mais à direita é a posição 0, a próxima é a posição 1, depois a posição 2 e assim por diante.
+                    Como vocês podem ver a seguir na imagem.</p>
+                    <img src="imagens/exHexDec.png" alt="imagem conversão hexadecimal decimal">
                 </div>
                 <h2>Como converter decimal para hexadecimal</h2>
                 <div class="exemplo">
-                    <p>A ideia é igual a fazer a conversão para o binário, mas nesse caso em vez de utilizarmos a divisão por 2, iremos utilizar a divisão por 16. <br><br>
-                    Você pega o número decimal divide ele por 16, e anota o resto que sobrar da divisão. E vai dividindo os resultados por 16, sempre pegando os restos. Continue fazendo esse procedimento até o resultado ser 0.<br><br>
-                    Para obter o resultado em hexadecimal, você pega os restos anotados e os invertem de ordem, como se pegasse os restos das divisões de baixo para cima (da última divisão para a primeira). Como vocês podem ver a seguir na imagem.</p>
-                    <img src="imagens/exDecHex.png" alt="imagem conversão decimal hexadecimal">
+                    <p>A ideia inicial é igual a fazer a conversão para o decimal, separa cada dígito do hexadecimal. Cada letra e cada número corresponde a um número decimal. <br><br>
+                    Substitua cada dígito pelo seu equivalente binário de 4 bits.<br><br>
+                    Como vocês podem ver a seguir na imagem.</p>
+                    <img src="imagens/exHexBin.png" alt="imagem conversão hexadecimal binario">
                 </div>
             </section>
         </main>
