@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <title>Conversor</title>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <h1>Conversor Numérico</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="conversor.html">Conversor</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <h1>Conversor Decimal-Binário-Hexadecimal</h1>
+                <div class="conversor">
+                    <label for="decimal">Número Decimal:</label>
+                    <input type="text" id="decimal">
+                    <button onclick="converterDecBin(); converterDecHex()">Converter</button>
+                    <p id="resultadoBinario">Binário: </p>
+                    <p id="resultadoHexadecimal">Hexadecimal: </p>
+                </div>
+            </section>
+        </main>
+
+        <script>
+            function converterDecBin(){
+                //console.log('Botão do converter Decimal para Binário');
+                var decimal = document.getElementById("decimal").value;
+                //console.log(decimal);
+                var binario = decimalParaBinario(decimal);
+                //console.log(binario);
+                document.getElementById('resultadoBinario').textContent = "Binário: " + binario;
+            }
+
+            function converterDecHex() {
+                var decimal = document.getElementById("decimal").value;
+                console.log(decimal);
+                var hex = decimalParaHexadecimal(decimal);
+                console.log(hex);
+                document.getElementById("resultadoHexadecimal").textContent = "Hexadecimal: " + hex;
+            }
+
+        </script>
+    </body>
+</html>

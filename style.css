@@ -11,6 +11,9 @@
 
 nav{
     border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
     background-color: #9a9a9a;
     box-shadow: 0px 2px 11px -2px rgba(0,0,0,0.72);
@@ -18,6 +21,20 @@ nav{
 
 nav h1{
     font-size: 26px;
+}
+
+li{
+    /* border: 1px solid red; */
+    list-style: none;
+    padding: 5px;
+    text-align: center;
+    border-bottom: 1px solid #4e687a;
+    font-size: 18px;
+}
+
+nav a{
+    text-decoration: none;
+    color: #000;
 }
 
 section{
@@ -36,6 +53,12 @@ section p{
     text-align: justify;
     padding: 20px;
     font-size: 18px;
+}
+
+section > div{
+    border: 1px solid yellow;
+    display: flex;
+    flex-direction: column;
 }
 
 section:nth-child(odd){
@@ -86,15 +109,61 @@ section h2{
     display: none;
 }
 
+.conversor{
+    padding: 10px 20px;
+}
+
+label{
+    font-size: 20px;
+    padding: 10px 0px;
+}
+
+input {
+    padding: 5px 0px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    width: 200px;
+}
+
+button{
+    padding: 5px;
+    font-size: 16px;
+    width: 100px;
+}
+
         /*Versão DESKTOP*/
 
 @media screen and (min-width: 1000px){
     nav{
         padding-left: 30px;
+        flex-direction: row;
+        justify-content: space-between;
     }
     
     nav h1{
         font-size: 30px;
+        transition: all 0.5s;
+    }
+
+    nav h1:hover{
+        letter-spacing: 2px;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav li{
+        font-size: 20px;
+        margin: 5px;
+        transition: all 0.5s;
+    }
+
+    li:hover{
+        background-color: #4e687a;
+        border-radius: 10px;
+        cursor: pointer;
     }
 
     section > div{
