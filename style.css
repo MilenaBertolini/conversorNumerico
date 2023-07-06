@@ -20,6 +20,43 @@ nav h1{
     font-size: 26px;
 }
 
+section{
+    display: flex;
+    flex-direction: column;
+}
+
+section h1{
+    text-align: center;
+    padding: 15px;
+}
+
+section p{
+    text-align: justify;
+    padding: 20px;
+    font-size: 18px;
+}
+
+section:nth-child(odd){
+    background-color: #fff;
+}
+
+section:nth-child(even){
+    background-color: #a6aaa5;
+}
+
+.linha{
+    width: 300px;
+    margin: auto;
+    border-bottom: 4px solid #455866;
+    margin-bottom: 20px;
+}
+
+.sistemasNumeracao > div img{
+    width: 200px;
+    display: block;
+    margin: auto;
+}
+
         /*Versão DESKTOP*/
 
 @media screen and (min-width: 1000px){
