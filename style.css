@@ -23,11 +23,13 @@ nav h1{
 section{
     display: flex;
     flex-direction: column;
+    border: 1px solid green;
 }
 
 section h1{
     text-align: center;
     padding: 15px;
+    margin-top: 5px;
 }
 
 section p{
@@ -41,7 +43,7 @@ section:nth-child(odd){
 }
 
 section:nth-child(even){
-    background-color: #a6aaa5;
+    background-color: #c2c2c2;
 }
 
 .linha{
@@ -51,10 +53,23 @@ section:nth-child(even){
     margin-bottom: 20px;
 }
 
-.sistemasNumeracao > div img{
+section > div img{
     width: 200px;
     display: block;
     margin: auto;
+    margin-bottom: 10px;
+}
+
+.decimal .linha{
+    width: 120px;
+}
+
+section h2{
+    padding: 10px;
+}
+
+.exemplo img{
+    width: 300px;
 }
 
         /*Versão DESKTOP*/
@@ -66,5 +81,48 @@ section:nth-child(even){
     
     nav h1{
         font-size: 30px;
+    }
+
+    section > div{
+        display: flex;
+        flex-direction: row;
+        padding: 20px 50px;
+        border: 1px solid blue;
+    }
+    
+    section h1{
+        margin-top: 20px;
+        padding-bottom: 10px;
+        font-size: 26px;
+        border: 1px solid red;
+    }
+    
+    section p{
+        /* font-size: 20px; */
+        display: flex;
+        align-items: center;
+    }
+
+    .linha{
+        width: 350px;
+        padding: 0px;
+    }
+    
+    section > div img{
+        width: 250px;
+        padding-right: 20px;
+    }
+
+    /* section:nth-child(even) div{
+        flex-direction: row-reverse;
+    } */
+
+    section h2{
+        padding-left: 30px;
+    }
+
+    .exemplo img{
+        width: 500px;
+        margin: 10px;
     }
 }
