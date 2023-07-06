@@ -60,8 +60,13 @@ section > div img{
     margin-bottom: 10px;
 }
 
-.decimal .linha{
-    width: 120px;
+.decimal .linha,
+.binario .linha{
+    width: 130px;
+}
+
+.hexadecimal .linha{
+    width: 180px;
 }
 
 section h2{
