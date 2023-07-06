@@ -68,8 +68,17 @@ section h2{
     padding: 10px;
 }
 
-.exemplo img{
+.exemplo img,
+.binario img{
     width: 300px;
+}
+
+.mobile{
+    display: block;
+}
+
+.desktop{
+    display: none;
 }
 
         /*Versão DESKTOP*/
@@ -125,4 +134,21 @@ section h2{
         width: 500px;
         margin: 10px;
     }
+
+    .binario .linha{
+        width: 130px;
+    }
+
+    .mobile{
+        display: none;
+    }
+
+    .desktop{
+        display: block;
+    }
+
+    .exemplo .desktop{
+        width: 620px;
+    }
+
 }
