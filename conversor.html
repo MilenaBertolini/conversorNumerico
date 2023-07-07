@@ -37,10 +37,10 @@
                 <div class="conversor">
                     <label for="decimalNum">Decimal:</label>
                     <input type="text" id="decimalNum">
-                    <button onclick="converterNumBin(); converterNumHex()">Converter</button>
+                    <button onclick="converterDec()">Converter</button>
                     <label for="bin">Binário:</label>
                     <input type="text" id="bin">
-                    <button onclick="converterBinNum(); converterBinHex()">Converter</button>
+                    <button onclick="converterBin()">Converter</button>
                     <label for="hexadecimal">Hexadecimal:</label>
                     <input type="text" id="hexadecimal">
                     <button onclick="converterNumBin(); converterNumHex(); converterBinNum()">Converter</button>
@@ -54,27 +54,18 @@
 
         <script>
 
-            function converterNumBin(){
+            function converterDec(){
                 var decimalNum = document.getElementById("decimalNum").value;
                 var binario = decimalParaBinario(decimalNum);
                 document.getElementById('bin').value = binario;
-            }
-
-            function converterNumHex(){
-                var decimalNum = document.getElementById("decimalNum").value;
                 var hex = decimalParaHexadecimal(decimalNum);
                 document.getElementById('hexadecimal').value = hex;
             }
 
-            function converterBinNum(){
+            function converterBin(){
                 var bin = document.getElementById("bin").value;
                 var decimal = binarioParaDecimal(bin);
                 document.getElementById('decimalNum').value = decimal;
-            }
-
-            function converterBinHex(){
-                var bin = document.getElementById("bin").value;
-                var decimal = binarioParaDecimal(bin);
                 var hex = decimalParaHexadecimal(decimal);
                 document.getElementById("hexadecimal").value = hex;
             }
