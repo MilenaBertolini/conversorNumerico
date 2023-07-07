@@ -28,7 +28,7 @@
                     <button onclick="converterDecBin(); converterDecHex()">Converter</button>
                     <p id="resultadoBinario">Binário: </p>
                     <p id="resultadoHexadecimal">Hexadecimal: </p>
-                    <button onclick="reset()">Limpar</button>
+                    <button onclick="reset()" class="btn">Limpar</button>
                 </div>
             </section>
 
@@ -43,11 +43,8 @@
                     <button onclick="converterBin()">Converter</button>
                     <label for="hexadecimal">Hexadecimal:</label>
                     <input type="text" id="hexadecimal">
-                    <button onclick="converterNumBin(); converterNumHex(); converterBinNum()">Converter</button>
-                    <!-- <p id="resultadoBinario">Binário: </p>
-                    <p id="resultadoHexadecimal">Hexadecimal: </p>
-                    <p id="resultadoDecimal">Decimal: </p> -->
-                    <button onclick="resetar()">Limpar</button>
+                    <button onclick="converterHex()">Converter</button>
+                    <button onclick="resetar()" class="btn">Limpar</button>
                 </div>
             </section>
         </main>
@@ -70,9 +67,13 @@
                 document.getElementById("hexadecimal").value = hex;
             }
 
-            // function converterHexNum(){
-
-            // }
+            function converterHex(){
+                var hexadecimal = document.getElementById("hexadecimal").value;
+                var decimal = hexadecimalParaDecimal(hexadecimal);
+                document.getElementById('decimalNum').value = decimal;
+                var binario = decimalParaBinario(decimal);
+                document.getElementById('bin').value = binario;
+            }
 
             function converterDecBin(){
                 //console.log('Botão do converter Decimal para Binário');
