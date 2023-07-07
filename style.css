@@ -111,6 +111,7 @@ section h2{
 
 .conversor{
     padding: 10px 20px;
+    font-weight: bold;
 }
 
 label{
@@ -119,7 +120,8 @@ label{
 }
 
 input {
-    padding: 5px 0px;
+    padding: 5px;
+    margin-left: 2px;
     margin-bottom: 10px;
     font-size: 18px;
     width: 200px;
@@ -129,6 +131,9 @@ button{
     padding: 5px;
     font-size: 16px;
     width: 100px;
+    background-color: #7ca3be;
+    border: 2px solid #30404b;
+    border-radius: 5px;
 }
 
         /*Versão DESKTOP*/
@@ -223,6 +228,49 @@ button{
 
     .exemplo .desktop{
         width: 620px;
+    }
+
+    .conversor{
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+    }
+
+    
+    label{
+        font-size: 24px;
+        padding: 20px 10px;
+    }
+    
+    input {
+        padding: 10px;
+        margin-bottom: 20px;
+        font-size: 18px;
+        width: 200px;
+    }
+    
+    button{
+        padding: 7px;
+        font-size: 18px;
+        width: 100px;
+        transition: all 0.5s;
+    }
+
+    button:hover{
+        background-color: #91bedf;
+        cursor: pointer;
+    }
+
+    button:active{
+        transform: scale(0.95);
+    }
+
+    .conversor p{
+        border: 2px solid black;
+        padding: 12px;
+        margin-top: 5px;
     }
 
 }

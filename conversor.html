@@ -28,11 +28,13 @@
                     <button onclick="converterDecBin(); converterDecHex()">Converter</button>
                     <p id="resultadoBinario">Binário: </p>
                     <p id="resultadoHexadecimal">Hexadecimal: </p>
+                    <button onclick="reset()">Limpar</button>
                 </div>
             </section>
         </main>
 
         <script>
+
             function converterDecBin(){
                 //console.log('Botão do converter Decimal para Binário');
                 var decimal = document.getElementById("decimal").value;
@@ -48,6 +50,12 @@
                 var hex = decimalParaHexadecimal(decimal);
                 console.log(hex);
                 document.getElementById("resultadoHexadecimal").textContent = "Hexadecimal: " + hex;
+            }
+
+            function reset(){
+                document.getElementById('decimal').value=''; 
+                document.getElementById('resultadoBinario').textContent = "Binário: "; 
+                document.getElementById("resultadoHexadecimal").textContent = "Hexadecimal: ";
             }
 
         </script>
