@@ -24,8 +24,12 @@ function hexadecimalParaDecimal(hexadecimal) {
     return parseInt(hexadecimal, 16);
 }
 
-function copiarResposta(componente){
-    var resultadoCopiado = document.getElementById(componente) + '';
-    console.log(resultadoCopiado.split(':')[1]);
-    navigator.clipboard.writeText(resultadoCopiado.split(':')[1]);
+function copiarRespostaP(componente){
+    var resultadoCopiado = document.getElementById(componente).textContent.split(':')[1].trim();
+    navigator.clipboard.writeText(resultadoCopiado);
+}
+
+function copiarRespostaInput(componente){
+    var copiarResultado = document.getElementById(componente).value;
+    navigator.clipboard.writeText(copiarResultado);
 }

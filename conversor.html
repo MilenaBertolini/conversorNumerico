@@ -27,9 +27,9 @@
                     <input type="text" id="decimal">
                     <button onclick="converterDecBin(); converterDecHex()">Converter</button>
                     <p id="resultadoBinario">Binário: </p>
-                    <button onclick="copiarResposta('resultadoBinario')" class="copiar">Copiar</button>
+                    <button onclick="copiarRespostaP('resultadoBinario')" class="copiar">Copiar</button>
                     <p id="resultadoHexadecimal">Hexadecimal: </p>
-                    <button onclick="copiarResposta('resultadoHexadecimal')" class="copiar">Copiar</button>
+                    <button onclick="copiarRespostaP('resultadoHexadecimal')" class="copiar">Copiar</button>
                     <button onclick="reset()" class="btn">Limpar</button>
                 </div>
             </section>
@@ -40,12 +40,15 @@
                     <label for="decimalNum">Decimal:</label>
                     <input type="text" id="decimalNum">
                     <button onclick="converterDec()">Converter</button>
+                    <button onclick="copiarRespostaInput('decimalNum')" class="copiar">Copiar</button>
                     <label for="bin">Binário:</label>
                     <input type="text" id="bin">
                     <button onclick="converterBin()">Converter</button>
+                    <button onclick="copiarRespostaInput('bin')" class="copiar">Copiar</button>
                     <label for="hexadecimal">Hexadecimal:</label>
                     <input type="text" id="hexadecimal">
                     <button onclick="converterHex()">Converter</button>
+                    <button onclick="copiarRespostaInput('hexadecimal')" class="copiar">Copiar</button>
                     <button onclick="resetar()" class="btn">Limpar</button>
                 </div>
             </section>
@@ -109,7 +112,6 @@
                 var decimal = hexadecimalParaDecimal(hex);
                 document.getElementById("resultadoDecimalHex").textContent = "Decimal: " + decimal;
             }
-
             
             function reset(){
                 document.getElementById('decimal').value=''; 
