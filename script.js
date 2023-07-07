@@ -23,3 +23,9 @@ function binarioParaDecimal(binario) {
 function hexadecimalParaDecimal(hexadecimal) {
     return parseInt(hexadecimal, 16);
 }
+
+function copiarResposta(componente){
+    var resultadoCopiado = document.getElementById(componente) + '';
+    console.log(resultadoCopiado.split(':')[1]);
+    navigator.clipboard.writeText(resultadoCopiado.split(':')[1]);
+}
