@@ -21,7 +21,7 @@
 
         <main>
             <section>
-                <h1>Conversor Decimal-Binário-Hexadecimal</h1>
+                <h1>Conversor Decimal para Binário e Hexadecimal</h1>
                 <div class="conversor">
                     <label for="decimal">Número Decimal:</label>
                     <input type="text" id="decimal">
@@ -31,10 +31,40 @@
                     <button onclick="reset()">Limpar</button>
                 </div>
             </section>
+
+            <section>
+                <h1>Conversor Decimal-Binário-Hexadecimal</h1>
+                <div class="conversor">
+                    <label for="decimalNum">Decimal:</label>
+                    <input type="text" id="decimalNum">
+                    <label for="binario">Binário:</label>
+                    <input type="text" id="binario">
+                    <label for="hexadecimal">Hexadecimal:</label>
+                    <input type="text" id="hexadecimal">
+                    <button onclick="converterNumBin();converterNumHex()">Converter</button>
+                    <!-- <p id="resultadoBinario">Binário: </p>
+                    <p id="resultadoHexadecimal">Hexadecimal: </p>
+                    <p id="resultadoDecimal">Decimal: </p> -->
+                    <button onclick="resetar()">Limpar</button>
+                </div>
+            </section>
         </main>
 
         <script>
 
+            function converterNumBin(){
+                var decimalNum = document.getElementById("decimalNum").value;
+                var binario = decimalParaBinario(decimalNum);
+                document.getElementById('binario').value = binario;
+            }
+
+            function converterNumHex(){
+                var decimalNum = document.getElementById("decimalNum").value;
+                var hex = decimalParaHexadecimal(decimalNum);
+                document.getElementById('hexadecimal').value = hex;
+            }
+
+            
             function converterDecBin(){
                 //console.log('Botão do converter Decimal para Binário');
                 var decimal = document.getElementById("decimal").value;
@@ -46,16 +76,34 @@
 
             function converterDecHex() {
                 var decimal = document.getElementById("decimal").value;
-                console.log(decimal);
+                //console.log(decimal);
                 var hex = decimalParaHexadecimal(decimal);
-                console.log(hex);
+                //console.log(hex);
                 document.getElementById("resultadoHexadecimal").textContent = "Hexadecimal: " + hex;
+            }
+
+            function converterBinDec() {
+                var binario = document.getElementById("binario").value;
+                var decimal = binarioParaDecimal(binario);
+                document.getElementById("resultadoDecimal").textContent = "Decimal: " + decimal;
+            }
+
+            function converterHexDec() {
+                var hex = document.getElementById("hexadecimalDec").value;
+                var decimal = hexadecimalParaDecimal(hex);
+                document.getElementById("resultadoDecimalHex").textContent = "Decimal: " + decimal;
             }
 
             function reset(){
                 document.getElementById('decimal').value=''; 
                 document.getElementById('resultadoBinario').textContent = "Binário: "; 
                 document.getElementById("resultadoHexadecimal").textContent = "Hexadecimal: ";
+            }
+
+            function resetar(){
+                document.getElementById('decimalNum').value=''; 
+                document.getElementById('binario').value=''; 
+                document.getElementById('hexadecimal').value=''; 
             }
 
         </script>
